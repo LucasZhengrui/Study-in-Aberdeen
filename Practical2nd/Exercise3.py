@@ -1,0 +1,15 @@
+#double, triple input number, half, division by 3 and its remainder
+
+num = int(input("Please input the number in your mind: "))
+print("Confirmation of the number you have input: ")
+print(num)
+print("Double your number: ")
+print(num*2)
+print("Here is the triple: ")
+print(num*3)
+print("Here is the half of your number: ")
+print(num/2)
+print("Here is the int division by 3: ")
+print(int(num/3))
+print("Here is the remainder of the last division: ")
+print(num - num/3)
