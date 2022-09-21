@@ -8,5 +8,5 @@ name = input("What is your name: ")
 age = int(input("How old are you: "))
 num = int(input("Enter a number: "))
 year = 2022 - age + 100
-msg = name + ", you will be 100 years old in the year " + str(year) +"\n"
+msg = name + ", you will be 100 years old in the year " + str(year) + "\n"
 print(msg*num)
