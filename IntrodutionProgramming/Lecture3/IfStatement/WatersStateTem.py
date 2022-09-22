@@ -1,4 +1,4 @@
-# Cognize which state of water in different Temperature (Searched by Google)
+# recognize which state of water in different Temperature (Searched by Google)
 
 tmp = int(input("Please input the temperature of water: "))
 if tmp >= 212:
