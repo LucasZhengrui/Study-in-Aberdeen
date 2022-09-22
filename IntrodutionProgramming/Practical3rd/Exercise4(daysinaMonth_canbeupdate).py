@@ -1,4 +1,4 @@
-#
+# Recognize how many days in a month(yyyy/mm)
 
 year = int(input("Please input the year you want to check: "))
 month = input("Please input the month you want to check: ")
