@@ -7,4 +7,4 @@
 ![](https://i.imgur.com/nLr2s2L.jpg)
 
 Feel free to visit [us](https://www.abdn.ac.uk/).  
-Contact me ```lucaszhengrui@gmail.com```
+Contact me through ```lucaszhengrui@gmail.com```
