@@ -1,3 +1,5 @@
+# input 20 values, and then calculate their sum.
+
 sum = 0
 for i in range(20):
     num = int(input("Please input a number: "))
