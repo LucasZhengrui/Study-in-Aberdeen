@@ -1,3 +1,5 @@
+# Finding the highest number in a lot of values. 
+
 highest = 1
 while highest != 0:
     num = int(input("Please enter a number: "))
