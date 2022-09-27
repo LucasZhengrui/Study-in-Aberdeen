@@ -7,3 +7,5 @@ for i in new_string:
 x = ' '.join(new_list) # change list back to string
 
 print(x)
+
+# Result is "$ntroduction $f $ython $rogramming"
