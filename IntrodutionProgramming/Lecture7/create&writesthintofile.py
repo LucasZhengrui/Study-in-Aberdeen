@@ -1,4 +1,4 @@
-fh = open("file.txt", 'w') # r: only readable, w: can write | Here is the statement that you can create a new offline file in your laptop.
+fh = open("file.txt", 'w') # r: only readable, w: can write, a:append sth without deleting the older stuff | Here is the statement that you can create a new offline file in your laptop.
 
 # fh.write("type sth here, congrats!")
 # fh.write("\n1000") # check the difference between this line and the next line
