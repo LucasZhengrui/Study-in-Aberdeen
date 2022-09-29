@@ -28,3 +28,11 @@ while number == 1:
         message = ''.join(temp)
 
 print(message)
+
+
+# input:
+# ABCD
+# XYZ" "
+# output:
+# DEFGABC
+# Can be updated
