@@ -14,9 +14,10 @@ def random_num():
     return num
 
 item = 0
+num = random_num()
+# print(num) # Just for testing the program
 while True:
     guessing_num = int(input("Please guessing and inputing a number(n): "))
-    # print(num) # Just for testing the program
     if guessing_num == num:
         item += 1
         print("That's right! You took", item, "guess(es)")
