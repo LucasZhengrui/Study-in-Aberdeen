@@ -10,7 +10,7 @@ For this task, you can import and use 'random.randint'. (10 Marks)
 
 import random
 def random_num():
-    num = random.randint(0,100)
+    num = random.randint(1,100)
     return num
 
 item = 0
