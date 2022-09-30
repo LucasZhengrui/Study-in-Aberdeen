@@ -9,7 +9,10 @@ For this task, you can import and use 'random.randint'. (10 Marks)
 '''
 
 import random
-num = random.randint(0,100)
+def random_num():
+    num = random.randint(0,100)
+    return num
+
 item = 0
 while True:
     guessing_num = int(input("Please guessing and inputing a number(n): "))
