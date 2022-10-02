@@ -20,7 +20,7 @@ while True:
     guessing_num = int(input("Please guessing and inputing a number(n): "))
     if guessing_num == num:
         item += 1
-        print("That's right! You took", item, "guess(es)")
+        print("That's right! It's", num, ". You took", item, "guess(es)")
         break
     elif guessing_num < num:
         item += 1
