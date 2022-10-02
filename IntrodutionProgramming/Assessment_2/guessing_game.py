@@ -9,12 +9,12 @@ For this task, you can import and use 'random.randint'. (10 Marks)
 '''
 
 import random
-def random_num():
+def guessing_game():
     num = random.randint(1,100)
     return num
 
 item = 0
-num = random_num()
+num = guessing_game()
 # print(num) # Just for testing the program
 while True:
     guessing_num = int(input("Please guessing and inputing a number(n): "))
