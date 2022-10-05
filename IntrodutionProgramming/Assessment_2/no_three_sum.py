@@ -11,23 +11,23 @@ no_three_sum(2, 1, 21) → 24
 '''
 
 def no_three_sum(a, b, c):
-    num1 = fix_three(a)
+    num1 = fix_three(a) # Quote the fix_three function to fix the value of a, b, and c
     num2 = fix_three(b)
     num3 = fix_three(c)
-    sum = num1 + num2 + num3
+    sum = num1 + num2 + num3 # Caculate the final sum value, and then return it
     return sum
 
 def fix_three(n):
-    if (n >= 20 and n <= 29):
+    if (n >= 20 and n <= 29): # if n(number) is between 20 and 29, it will not be changed or fixed here, so return directly
         return n
     else:
-        if n % 3 == 0:
+        if n % 3 == 0: # if n(number) is a multiple of 3, besides the number between 20 and 29, it will becomes zero
             n = 0
         return n
 
 a = int(input("Please input the first number: "))
 b = int(input("Please input the second number: "))
-c = int(input("Please input the third number: "))
-print("The numbers you have input are", a, b, c)
+c = int(input("Please input the third number: ")) # input a, b, and c separately
+print("The numbers you have input are", a, b, c) # print the original number firstly, so that can see the difference
 sum = no_three_sum(a, b, c)
 print("Due to the internal rules, the sum of your numbers is", sum)
