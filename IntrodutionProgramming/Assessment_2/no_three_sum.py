@@ -25,9 +25,12 @@ def fix_three(n):
             n = 0
         return n
 
-a = int(input("Please input the first number: "))
-b = int(input("Please input the second number: "))
-c = int(input("Please input the third number: ")) # input a, b, and c separately
-print("The numbers you have input are", a, b, c) # print the original number firstly, so that can see the difference
-sum = no_three_sum(a, b, c)
-print("Due to the internal rules, the sum of your numbers is", sum)
+try:
+    a = int(input("Please input the first number: "))
+    b = int(input("Please input the second number: "))
+    c = int(input("Please input the third number: ")) # input a, b, and c separately
+    print("The numbers you have input are", a, b, c) # print the original number firstly, so that can see the difference
+    sum = no_three_sum(a, b, c)
+    print("Due to the internal rules, the sum of your numbers is", sum)
+except:
+    print("Input error!")
