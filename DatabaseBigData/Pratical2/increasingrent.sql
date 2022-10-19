@@ -1,0 +1,3 @@
+SELECT *
+FROM Client
+ORDER BY MaxRen ASC;
