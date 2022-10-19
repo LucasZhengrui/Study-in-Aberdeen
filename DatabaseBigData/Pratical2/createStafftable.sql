@@ -1,0 +1,10 @@
+CREATE TABLE Staff(
+    StaffNo INTEGER PRIMARY KEY,
+    Fname VARCHAR(15),
+    Lname VARCHAR(15),
+    POSITION VARCHAR(20),
+    Sex VARCHAR(10),
+    DOB VARCHAR(20),
+    Salary FLOAT,
+    BranchNo VARCHAR(20)
+);
