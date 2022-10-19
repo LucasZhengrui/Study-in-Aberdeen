@@ -1,0 +1,1 @@
+CREATE TABLE Client ( ClientNo VARCHAR(20), Fname VARCHAR(20), Lname VARCHAR(20), TelNo VARCHAR(20), PrefType VARCHAR(20), MaxRen INTEGER );
