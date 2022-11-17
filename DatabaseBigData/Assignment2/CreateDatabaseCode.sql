@@ -9,7 +9,7 @@ DOD date
 create table ArtObject(
 ArtObjID integer primary key,
 ArtistID integer references Artist(ArtistID),
-CreationYear Year,
+CreationYear Year(),
 Title varchar(20),
 Description varchar(30),
 Country varchar(20),
