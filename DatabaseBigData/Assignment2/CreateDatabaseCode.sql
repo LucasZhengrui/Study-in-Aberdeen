@@ -78,16 +78,16 @@ ContactName varchar(20)
 );
 
 create table ArtObjectBorrowed(
-  ArtObjectBurrowedId int primary key,
-  ArtObjID integer references ArtObject(ArtObjID) ,
-  BorrowedDate date ,
-  RetrunDate date 
+ArtObjectBurrowedId int primary key,
+ArtObjID integer references ArtObject(ArtObjID) ,
+BorrowedDate date ,
+RetrunDate date 
 );
 
 create table ExhibitionDetail(
-  ExhibitionDetailID int primary key,
-  ExhibitionID int references Exhibition(ExhibitionID),
-  ArtObjID int references ArtObject(ArtObjID) 
+ExhibitionDetailID int primary key,
+ExhibitionID int references Exhibition(ExhibitionID),
+ArtObjID int references ArtObject(ArtObjID) 
 );
 
 create table LoyalVistor(
