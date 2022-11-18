@@ -101,3 +101,8 @@ City varchar(20) ,
 Postcode varchar(20) ,
 Preferences varchar(20) 
 );
+
+create table Tickets(
+TicketsID integer primary key,
+ExhibitionID int references Exhibition(ExhibitionID)
+);
