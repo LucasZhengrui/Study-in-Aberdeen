@@ -17,6 +17,7 @@ Epoch varchar(20) ,
 DateAcquired date ,
 Cost float ,
 Status varchar(20) ,
+MuseumName varchar(20) references ArtsFriendsCircle(MuseumName),
 ArtType varchar(20) 
 );
 
