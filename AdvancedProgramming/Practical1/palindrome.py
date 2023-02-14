@@ -3,5 +3,5 @@ print(len(word))
 
 
 def pali(text):
-    return (text == text[::-1])
+    return (text == text[::-1])  # To check a word is it like "aba, level"
 print(pali(word))
