@@ -1,2 +1,4 @@
+# Generate random number between 1 and 5.
+
 import random
-random.random() # 0 - 1
+random.randint(1,5)
