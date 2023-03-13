@@ -1,0 +1,19 @@
+<html>
+<head>
+  <title>Individual Polar Bear Tracking</title>
+</head>
+<body>
+    <p>Sightings for this bear via Radio Device</p>
+        {% for sighting in sightings %}
+            <p>Bear: 
+                <!-- <b>{{ sighting.bear_id }}</b> -->
+                with deploy_id:  
+                {{ sighting.deploy_id }} was picked up 
+                    {{ sighting.recieved }} at 
+                {{ sighting.latitude }}	latitude and 
+                {{ sighting.longitude }} longitude where the temperature was: 
+                    {{ sighting.temperature }} (although 0 represents an empty value)
+            </p>
+        {% endfor %}
+</body>
+</html>
