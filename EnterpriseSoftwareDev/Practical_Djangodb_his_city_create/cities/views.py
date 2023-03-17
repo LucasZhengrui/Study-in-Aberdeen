@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator
 from .models import City
+from .forms import City_form
 # Create your views here.
 def city_list(request):
         cities = City.cities()
@@ -16,5 +17,7 @@ def city__by_name(request, city):
         page_obj = paginator.get_page(page_number)
         return render(request, 'cities/city_list.html', {'page_obj': page_obj})
 
-def city_edit(request):
-        return render(request, 'cities/edit.html')
+def city_edit(request, city):
+        update_stuff = City.objects.get(pk = city)
+        form = City_form
+        return render(request, 'cities/edit.html', {'form': form})
