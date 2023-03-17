@@ -7,6 +7,12 @@
     This is {{ city.city }} also sometimes known as {{ city.otherName }} in 
     {{city.country}}, with the {{ city.pop }} in {{ city.year }}, and located at 
     {{ city.latitude }} and {{ city.longitude }}
+    <input type="button" onclick="alert('Are you sure that you want to delete this line?')" value="Delete">
+    <a href="edit.html">
+        <button>
+            Edit
+        </button>
+    </a>    
     </p>
     {% endfor %}
     

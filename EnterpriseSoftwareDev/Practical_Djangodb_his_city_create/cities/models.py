@@ -24,3 +24,7 @@ class City(models.Model):
     def city_by_name(city):
         city_list = City.objects.filter(city=city)
         return city_list
+    
+    # def update_feature(request, id):
+    #     id = City.id
+    #     City.city = request.POST.get('name')
