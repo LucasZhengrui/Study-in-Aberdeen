@@ -7,7 +7,7 @@ cursor = connection.cursor()
 connection.execute('drop table if exists countrylist')
 connection.execute('create table countrylist (Dis_Num text PRIMARY KEY, Country_name text, Iso text, Region text, Continent text, location text)')
 
-with open('E:\Desktop\Study Files\AfterAberdeen\AllCourseCode\Study-in-Aberdeen\EnterpriseSoftwareDev\Assessment(FlaskTry)\data.csv', newline='') as d:
+with open('E:\Desktop\Study Files\AfterAberdeen\AllCourseCode\Study-in-Aberdeen\EnterpriseSoftwareDev\Assessment_FlaskTry\data.csv', newline='') as d:
     reader = csv.reader(d, delimiter=",")
     next(reader)
     for row in reader:
