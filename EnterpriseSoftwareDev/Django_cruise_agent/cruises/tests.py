@@ -12,4 +12,4 @@ class CruiseTests(TestCase):
         #print(response.content)
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "Cruise")
-        self.assertContains(response,"MorrisWolfe")
+        self.assertContains(response,"Webster PLC")
