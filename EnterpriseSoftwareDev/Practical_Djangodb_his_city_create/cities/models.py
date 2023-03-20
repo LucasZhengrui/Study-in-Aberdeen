@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+from django.urls import reverse
 # import sqlite3
 # Create your models here.
 
@@ -25,6 +26,5 @@ class City(models.Model):
         city_list = City.objects.filter(city=city)
         return city_list
     
-    # def update_feature(request, id):
-    #     id = City.id
-    #     City.city = request.POST.get('name')
+    def get_absolute_url(self):
+        return reverse('city.edit', kwargs={'pk', self.pk})

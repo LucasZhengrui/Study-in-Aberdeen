@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator
 from .models import City
-import pymysql
-from .forms import City_form
+from django.http import HttpResponse
+from django.views.generic import ListView, DetailView
+from django.views.generic import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
+# from cities.models import City
 # Create your views here.
 
 def city_list(request):
@@ -19,17 +22,11 @@ def city__by_name(request, city):
         page_obj = paginator.get_page(page_number)
         return render(request, 'cities/city_list.html', {'page_obj': page_obj})
 
-def city_edit(request, city):
-        update_stuff = City.objects.get(pk = city)
-        form = City_form
-        return render(request, 'cities/edit.html', {'form': form})
+class CityUpdate(UpdateView):
+        model = City
+        fields = ['id', 'city', 'otherName', 'country', 'latitude', 'longitude', 'year', 'pop', 'city_id']
+        success_url = reverse_lazy('city_list')
 
-# def data_insert(request):
-#         if request.method == 'GET':
-#                 return render(request, 'cities/edit.html')
-#         else:
-#                 input_value = request.POST.get('title')
-#                 connection = pymysql.connect(host = '127.0.0.1', port = 8000, db = 'db.sqlite3', charset = 'utf8')
-#                 cursor = connection.cursor(cursor = pymysql.cursors.DictCursor)
-
-                # cursor.execute('insert')
+class CityDelete(DeleteView):
+        model = City
+        success_url = reverse_lazy('city_list')
