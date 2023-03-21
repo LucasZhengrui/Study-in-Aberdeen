@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
+from django.urls import reverse
 
 # Create your models here.
 
@@ -16,6 +17,9 @@ class Bear(models.Model):
 
     def __str__(self):
         return f'self.bearID, self.ptt_ID, self.capture_lat, self.capture_long, self.sex, self.age_class, self.ear_applied, self.created_date'
+    
+    # def get_absolut_url(self):
+    #     return reverse('bear.edit', kwargs={'pk', self.pk})
 
 class Sighting(models.Model):
     bear_id = models.ForeignKey('bears.Bear', on_delete=models.CASCADE, related_name='sightings')
@@ -28,3 +32,6 @@ class Sighting(models.Model):
 
     def __str__(self):
         return f'self.bear_id, self.deploy_id, self.recieved, self.latitude, self.longitude, self.temperature, self.created_date'
+    
+    def get_absolute_url(self):
+        return reverse('bear.edit', kwargs={'pk', self.pk}) # This place has some problem about the primary key.
