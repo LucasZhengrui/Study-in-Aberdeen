@@ -27,4 +27,4 @@ class City(models.Model):
         return city_list
     
     def get_absolute_url(self):
-        return reverse('city.edit', kwargs={'pk', self.pk})
+        return reverse('city.edit', kwargs={'pk': self.pk})
