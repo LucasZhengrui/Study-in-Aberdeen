@@ -1,8 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Bear, Sighting
-from django.http import HttpResponse
-from django.views.generic import UpdateView
-from django.urls import reverse_lazy
+from django.utils import timezone
+from .form import BearForm
 # Create your views here.
 def bear_list(request):
     bears = Bear.objects.all()
@@ -27,7 +26,20 @@ def bear_detail(request, id):
     sightings = Sighting.objects.filter(bear_id=id)
     return render(request, 'bears/bear_detail.html', {'sightings' : sightings})
 
-class BearUpdate(UpdateView):
-    model = Sighting
-    fields = ['bear_id', 'deploy_id', 'recieved', 'latitude', 'longitude', 'temperature', 'created_date']
-    success_url = reverse_lazy('bear_detail')
+# class BearUpdate(UpdateView):
+#     model = Sighting
+#     fields = ['bear_id', 'deploy_id', 'recieved', 'latitude', 'longitude', 'temperature', 'created_date']
+#     success_url = reverse_lazy('bear_detail')
+# Edit version 1.0 (Didn't work sucessfully)
+
+def bear_new(request):
+    if request.method == 'POST':
+        form = BearForm(request.POST)
+        if form.is_valid():
+            bear = form.save(commit=False)
+            bear.created_date = timezone.now()
+            bear.save()
+            return redirect("bear_detail", id = bear.id)
+    else:
+        form = BearForm()
+    return render(request, 'bear/bear_edit.html', {'form': form})
