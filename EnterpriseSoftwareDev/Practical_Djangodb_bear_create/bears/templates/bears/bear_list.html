@@ -67,6 +67,12 @@
             }
             });
             </script>
+        </div>
+        <a href="{% url "bear_new" %}">
+            <button>
+                Create
+            </button>
+        </a>
         {% for bear in bears %}
         <p>
             <b>
@@ -77,9 +83,14 @@
             This is a {{ bear.age_class }} aged bear 
             {{bear.bearID}}, a {{ bear.sex }} bear, who has has an tag in its' {{ bear.ear_applied }} ear, with {{ bear.ptt_ID }} devise, and was
             tagged at {{ bear.capture_lat }} and {{ bear.capture_long }}
-            <a href="{% url "bear_edit" bear.id %}">
+            <a href="{% url "bear_edit" id=bear.id %}">
                 <button>
                     Edit
+                </button>
+            </a>
+            <a href="{% url "bear_delete" bear.id %}">
+                <button>
+                    Delete
                 </button>
             </a>
         </p>

@@ -42,4 +42,22 @@ def bear_new(request):
             return redirect("bear_detail", id = bear.id)
     else:
         form = BearForm()
-    return render(request, 'bear/bear_edit.html', {'form': form})
+    return render(request, 'bears/bear_edit.html', {'form': form})
+
+def bear_edit(request, id):
+    bear = get_object_or_404(Bear, id = id)
+    if request.method == 'POST':
+        form = BearForm(request.POST, instance=bear)
+        if form.is_valid():
+            bear = form.save(commit=False)
+            bear.created_date = timezone.now()
+            bear.save()
+            return redirect("bear_detail", id = bear.id)
+    else:
+        form = BearForm(instance=bear)
+    return render(request, 'bears/bear_edit.html', {'form': form, 'bear': bear})
+
+def bear_delete(request, id):
+    bear = get_object_or_404(Bear, id = id)
+    bear.delete()
+    return redirect('bear_list')
